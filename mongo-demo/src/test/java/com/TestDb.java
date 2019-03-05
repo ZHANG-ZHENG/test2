@@ -26,7 +26,7 @@ public class TestDb {
 	 */
 	@Test
 	public void TestSave(){	
-		userRepository.insert(new User(1001L,"appleyk",27));
+		userRepository.insert(new User(1002L,"appleykzz",22));
 		System.out.println("保存成功！");
 	}
 	
@@ -52,10 +52,10 @@ public class TestDb {
 	/**
 	 * 根据id删除对应User实体
 	 */
-	@Test
-	public void TestDelete(){
-		userRepository.deleteById(1001L);
-		//userRepository.delete(1001L);
-		System.out.println("删除成功！");
-	}
+//	@Test
+//	public void TestDelete(){
+//		userRepository.deleteById(1001L);
+//		//userRepository.delete(1001L);
+//		System.out.println("删除成功！");
+//	}
 }

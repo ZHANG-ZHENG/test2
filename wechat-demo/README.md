@@ -7,44 +7,50 @@ wxb2c8767dd7ed63a8
 appsecret
 55788866f78c132c99d447f257ef9b7d
 
-»ñÈ¡access_token
-httpsÇëÇó·½Ê½: GET
+è·å–access_token
+httpsè¯·æ±‚æ–¹å¼: GET
 https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxb2c8767dd7ed63a8&secret=55788866f78c132c99d447f257ef9b7d
 {"access_token":"19_CwhzSdhzef8D8lWs3LNm1F5SNl5AAUV4gRKmLOPBd3Z6qArdQt9eZK47LkPgx_EaXvfzdsv4nwMnwcFOtRCtB8OgY0n-mvNftXUdpoR-QSoOoVShY_8JTM--ERKh6cvsunvmesFYFBWO4WlxSGZaAHAJXQ","expires_in":7200}
 
-×Ô¶¨Òå²Ëµ¥´´½¨½Ó¿Ú
-https://api.weixin.qq.com/cgi-bin/menu/create?access_token=19_CwhzSdhzef8D8lWs3LNm1F5SNl5AAUV4gRKmLOPBd3Z6qArdQt9eZK47LkPgx_EaXvfzdsv4nwMnwcFOtRCtB8OgY0n-mvNftXUdpoR-QSoOoVShY_8JTM--ERKh6cvsunvmesFYFBWO4WlxSGZaAHAJXQ
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxb0f1796198a51edd&secret=4bdcb1beec6fbf295e5771df72e7a090
+{
+    "access_token": "19_WxKuk1DhPBcdIrcxMLdESwN0jexLv4Jw1zzPAT9F9_B4B2lmAJK0zd0fzE-CyJipO-PoBktoaoS-1ptEyGLsmm9xRugukl6mQne58tYEIqctiKP9O_z0u3RC0nvfDQaoB1JATxGoAoMnkdsNTQCdAEAJGS",
+    "expires_in": 7200
+}
+
+è‡ªå®šä¹‰èœå•åˆ›å»ºæ¥å£
+https://api.weixin.qq.com/cgi-bin/menu/create?access_token=19_WxKuk1DhPBcdIrcxMLdESwN0jexLv4Jw1zzPAT9F9_B4B2lmAJK0zd0fzE-CyJipO-PoBktoaoS-1ptEyGLsmm9xRugukl6mQne58tYEIqctiKP9O_z0u3RC0nvfDQaoB1JATxGoAoMnkdsNTQCdAEAJGS
 {
      "button":[
      {    
           "type":"view",
-          "name":"½ÌÑ§·ÖÎö",
-          "url":"http://scuclass.ruijie.com.cn/analysis/#/"
+          "name":"æ•™å­¦",
+          "url":"http://scuclass.ruijie.com.cn/analysis/#/"http://1e484531y2.imwork.net
       },     
       {    
           "type":"view",
-          "name":"µÇÂ½",
+          "name":"ç™»é™†",
           "url":"http://47.112.17.218/icmgr/rest/page/login"
       },
       {
-           "name":"²Ëµ¥",
+           "name":"èœå•",
            "sub_button":[
            {    
                "type":"view",
-               "name":"ËÑË÷",
+               "name":"æœç´¢",
                "url":"http://www.soso.com/"
             },
             {
                  "type":"miniprogram",
-                 "name":"Ğ¡³ÌĞò",
+                 "name":"å°ç¨‹åº",
                  "url":"http://mp.weixin.qq.com",
                  "appid":"wx286b93c14bbf93aa",
                  "pagepath":"pages/lunar/index"
              },
             {
-               "type":"click",
-               "name":"ÔŞÒ»ÏÂÎÒÃÇ",
-               "key":"V1001_GOOD"
+          "type":"view",
+          "name":"æ•™å­¦åˆ†æ",
+          "url":"http://1e484531y2.imwork.net/main"
             }]
        }]
  }
@@ -52,42 +58,44 @@ https://api.weixin.qq.com/cgi-bin/menu/create?access_token=19_CwhzSdhzef8D8lWs3L
 
 
 
- https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxb2c8767dd7ed63a8&secret=55788866f78c132c99d447f257ef9b7d
+ https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxb0f1796198a51edd&secret=55788866f78c132c99d447f257ef9b7d
 {"access_token":"19_CwhzSdhzef8D8lWs3LNm1F5SNl5AAUV4gRKmLOPBd3Z6qArdQt9eZK47LkPgx_EaXvfzdsv4nwMnwcFOtRCtB8OgY0n-mvNftXUdpoR-QSoOoVShY_8JTM--ERKh6cvsunvmesFYFBWO4WlxSGZaAHAJXQ","expires_in":7200}
 
-×Ô¶¨Òå²Ëµ¥´´½¨½Ó¿Ú
+è‡ªå®šä¹‰èœå•åˆ›å»ºæ¥å£
 https://api.weixin.qq.com/cgi-bin/menu/create?access_token=19_CwhzSdhzef8D8lWs3LNm1F5SNl5AAUV4gRKmLOPBd3Z6qArdQt9eZK47LkPgx_EaXvfzdsv4nwMnwcFOtRCtB8OgY0n-mvNftXUdpoR-QSoOoVShY_8JTM--ERKh6cvsunvmesFYFBWO4WlxSGZaAHAJXQ
 {
      "button":[
      {    
           "type":"view",
-          "name":"½ÌÑ§·ÖÎö",
+          "name":"æ•™å­¦åˆ†æ",
           "url":"http://scuclass.ruijie.com.cn/analysis/#/"
       },     
       {    
           "type":"view",
-          "name":"µÇÂ½",
+          "name":"ç™»é™†",
           "url":"http://47.112.17.218/icmgr/rest/page/login"
       },
       {
-           "name":"²Ëµ¥",
+           "name":"èœå•",
            "sub_button":[
            {    
                "type":"view",
-               "name":"ËÑË÷",
+               "name":"æœç´¢",
                "url":"http://www.soso.com/"
             },
             {
                  "type":"miniprogram",
-                 "name":"Ğ¡³ÌĞò",
+                 "name":"å°ç¨‹åº",
                  "url":"http://mp.weixin.qq.com",
                  "appid":"wx286b93c14bbf93aa",
                  "pagepath":"pages/lunar/index"
              },
             {
                "type":"click",
-               "name":"ÔŞÒ»ÏÂÎÒÃÇ",
+               "name":"èµä¸€ä¸‹æˆ‘ä»¬",
                "key":"V1001_GOOD"
             }]
        }]
  }
+ 
+ å¦‚æœå¼€å‘è€…æœ‰åœ¨å¤šä¸ªå…¬ä¼—å·ï¼Œæˆ–åœ¨å…¬ä¼—å·ã€ç§»åŠ¨åº”ç”¨ä¹‹é—´ç»Ÿä¸€ç”¨æˆ·å¸å·çš„éœ€æ±‚ï¼Œéœ€è¦å‰å¾€å¾®ä¿¡å¼€æ”¾å¹³å°ï¼ˆopen.weixin.qq.comï¼‰ç»‘å®šå…¬ä¼—å·åï¼Œæ‰å¯åˆ©ç”¨UnionIDæœºåˆ¶æ¥æ»¡è¶³ä¸Šè¿°éœ€æ±‚ã€‚

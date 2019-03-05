@@ -7,6 +7,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,12 +16,16 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.robot.AnswerBean;
 import com.robot.QuestionUtil;
+import com.ruijie.icweixin.config.WeixinConfig;
 
 @RestController
-@RequestMapping(value = "wechat")
+@RequestMapping(value = "icweixin")
 public class IndexController{
 
-    @RequestMapping(value = "auth")
+    @Autowired
+    private WeixinConfig weixinConfig;
+	
+    @RequestMapping(value = "server")
     public void auth(HttpServletRequest request,HttpServletResponse response) throws Exception{
     	System.out.println("auth");
 
@@ -36,6 +42,7 @@ public class IndexController{
         String nonce = request.getParameter("nonce");
         // 通过检验signature对请求进行校验，若校验成功则原样返回echostr，表示接入成功，否则接入失败
 
+        SignatureUtil.TOKEN = weixinConfig.getMyServiceAuth();
         if (!SignatureUtil.checkSignature(signature, timestamp, nonce)) {
         	System.out.println("checkSignature error");
         	return;
@@ -80,10 +87,10 @@ public class IndexController{
         }
         out.print(str);
         out.close();
-
-        
-        
-        
-
     }
+//	@GetMapping("/servicefile")
+//	String servicefile(HttpServletRequest request) {
+//		System.out.println("servicefile");
+//        return "7xCWZCDXEGfRMf6q";
+//    }     
 }

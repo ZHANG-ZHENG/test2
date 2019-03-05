@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class SignatureUtil {
 
     // 此处的token即为微信接口配置填写的签名
-    private static final String TOKEN = "weixin";
+    public static String TOKEN = "TOKEN";
 
     /**
      * 验证签名
