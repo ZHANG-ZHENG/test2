@@ -12,5 +12,6 @@
 		<module>jetty-demo</module>
 		<module>thread-test</module>
 		<module>gc-test</module>
+		<module>fastdfs-client-java</module>
     </modules>  
 </project>
