@@ -1,7 +1,7 @@
 package com;
 /**
  * 
- * ²ÎÊıÅäÖÃ
+ * å‚æ•°é…ç½®
 -Xms20m
 -Xmx20m
 -XX:+PrintGCTimeStamps
