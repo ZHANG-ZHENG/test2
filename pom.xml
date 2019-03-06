@@ -8,5 +8,7 @@
 	<modules>  
 		<module>mongo-demo</module>
 		<module>wechat-demo</module>
+		<module>fastdfs-demo</module>
+		<module>jetty-demo</module>
     </modules>  
 </project>

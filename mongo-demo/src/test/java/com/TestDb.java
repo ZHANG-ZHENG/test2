@@ -26,7 +26,7 @@ public class TestDb {
 	 */
 	@Test
 	public void TestSave(){	
-		userRepository.insert(new User(1002L,"appleykzz",22));
+		userRepository.insert(new User(1003L,"appl2z",22));
 		System.out.println("保存成功！");
 	}
 	
@@ -45,7 +45,7 @@ public class TestDb {
 	 */
 	@Test
 	public void TestFindByName(){	
-		List<User> users = userRepository.findByName("appleyk");
+		List<User> users = userRepository.findByName("appl2z");
 		System.out.println("size: "+users.size());
 	}
 	
