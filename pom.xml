@@ -13,5 +13,8 @@
 		<module>thread-test</module>
 		<module>gc-test</module>
 		<module>fastdfs-client-java</module>
+		<module>dynamic-compile</module>
+		<module>storm</module>
+		<module>zookeeper</module>
     </modules>  
 </project>
