@@ -16,5 +16,6 @@
 		<module>dynamic-compile</module>
 		<module>storm</module>
 		<module>zookeeper</module>
+		<module>maven-deploy-demo</module>
     </modules>  
 </project>
