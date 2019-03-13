@@ -4,24 +4,25 @@
 
 	<groupId>com.zz.test</groupId>
 	<artifactId>maven-deploy-demo</artifactId>
-	<version>1.0.0</version>
+	<version>3.0.0</version>
 
 
 
 	<dependencies>
+
 	</dependencies>
 	<distributionManagement>
 	  <repository>
-	    <id>maven-releases</id>
+	    <id>releases</id>
 	    <name>User Project Release</name>
-	    <url>http://114.115.130.246:8081/repository/maven-releases/</url>
+	    <url>http://182.61.57.136:8081/repository/maven-releases/</url>
 	  </repository>
 	
-<!-- 	  <snapshotRepository>
+ 	  <snapshotRepository>
 	    <id>snapshots</id>
 	    <name>User Project SNAPSHOTS</name>
-	    <url>http://114.115.130.246:8081/repository/maven-snapshots/</url>
-	  </snapshotRepository> -->
+	    <url>http://182.61.57.136:8081/repository/maven-releases/</url>
+	  </snapshotRepository>
 	</distributionManagement>
 
 
