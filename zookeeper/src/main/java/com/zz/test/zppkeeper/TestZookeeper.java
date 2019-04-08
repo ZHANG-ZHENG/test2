@@ -60,16 +60,16 @@ public class TestZookeeper implements Watcher{
      * 同步创建一个持久节点,ACL为 world:anyone:cdrwa 等同于如下命令：
      * create /node 123 world:anyone:cdrwa
      */
-//    zookeeper1.create("/node",
-//        "123".getBytes(),
-//        ZooDefs.Ids.OPEN_ACL_UNSAFE,
-//        CreateMode.PERSISTENT);
+    zookeeper1.create("/newlock",
+        "123".getBytes(),
+        ZooDefs.Ids.OPEN_ACL_UNSAFE,
+        CreateMode.PERSISTENT);
 
     /**
      * 同步创建一个持久节点，ACL为 world:anyone:cdrwa 所有人只拥有创建的权限,等同于如下命令：
      * create /node1 123 world:anyone:c
      */
-//    zookeeper1.create("/node1",
+//    zookeeper1.create("/nodezz",
 //        "123".getBytes(),
 //        Collections.singletonList(new ACL(ZooDefs.Perms.CREATE, ZooDefs.Ids.ANYONE_ID_UNSAFE)),
 //        CreateMode.PERSISTENT);
@@ -78,24 +78,24 @@ public class TestZookeeper implements Watcher{
      * 异步创建一个 临时的顺序节点，ACL为 ip:127.0.0.1:c 等同于如下命令：
      * create /node2 123 ip:127.0.0.1:c
      */
-    zookeeper1.create("/node2",
-        "123".getBytes(),
-        Collections.singletonList(new ACL(ZooDefs.Perms.CREATE, new Id("ip", "127.0.0.1"))),
-        CreateMode.EPHEMERAL_SEQUENTIAL,
-        new AsyncCallback.StringCallback() {
-
-			public void processResult(int rc, String path, Object ctx, String name) {
-	            System.out.println("rc:" + rc);
-	            System.out.println("path:" + path);
-	            System.out.println("ctx:" + ctx);
-	            System.out.println("name:" + name);
-			}
-
-        }, "传给服务端的内容,会在异步回调时传回来");
-    /**
-     * 注意这里,线程睡眠20秒,因为是创建的临时节点,如果不睡眠,你不能使用命令在控制台看见创建的临时节点
-     */
-    Thread.sleep(20000);
+//    zookeeper1.create("/node3",
+//        "123".getBytes(),
+//        Collections.singletonList(new ACL(ZooDefs.Perms.CREATE, new Id("ip", "127.0.0.1"))),
+//        CreateMode.EPHEMERAL_SEQUENTIAL,
+//        new AsyncCallback.StringCallback() {
+//
+//			public void processResult(int rc, String path, Object ctx, String name) {
+//	            System.out.println("rc:" + rc);
+//	            System.out.println("path:" + path);
+//	            System.out.println("ctx:" + ctx);
+//	            System.out.println("name:" + name);
+//			}
+//
+//        }, "传给服务端的内容,会在异步回调时传回来");
+//    /**
+//     * 注意这里,线程睡眠20秒,因为是创建的临时节点,如果不睡眠,你不能使用命令在控制台看见创建的临时节点
+//     */
+//    Thread.sleep(20000);
 
 
     /**
@@ -171,7 +171,7 @@ public class TestZookeeper implements Watcher{
 //     * DataCallback 异步通知
 //     * ctx 回调上下文
 //     */
-//    zookeeper1.getData("/node3", false, new AsyncCallback.DataCallback() {
+//    zookeeper1.getData("/node", false, new AsyncCallback.DataCallback() {
 //      @Override
 //      public void processResult(int rc, String path, Object ctx, byte[] data, Stat stat) {
 //        System.out.println("rc:" + rc);
