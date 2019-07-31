@@ -17,5 +17,6 @@
 		<module>storm</module>
 		<module>zookeeper</module>
 		<module>maven-deploy-demo</module>
+		<module>baidu-ocr</module>
     </modules>  
 </project>
