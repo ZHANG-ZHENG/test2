@@ -18,5 +18,7 @@
 		<module>zookeeper</module>
 		<module>maven-deploy-demo</module>
 		<module>baidu-ocr</module>
+		<module>QqClient</module>
+		<module>QqServer</module>
     </modules>  
 </project>

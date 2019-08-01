@@ -13,7 +13,7 @@ public class TestSample {
 	public static void main(String[] args) {
 		AipOcr client = new AipOcr("16926287", "g0Lev5IKgZQDVXIdaN3eioEX", "B7yMau42mnzPdcWDydz3mn3d8gLiQ9fB");
 		TestSample testSample = new TestSample();
-		testSample.sample(client);
+		testSample.sample2(client);
 	}
 	
 	public void sample(AipOcr client) {
@@ -38,6 +38,27 @@ public class TestSample {
 		}
 	    //byte[] file = null;
 	    res = client.idcard(file, idCardSide, options);
+	    System.out.println(res.toString(2));
+
+	}
+	
+	public void sample2(AipOcr client) {
+	    // 传入可选参数调用接口
+	    HashMap<String, String> options = new HashMap<String, String>();
+	    options.put("language_type", "CHN_ENG");
+	    options.put("detect_direction", "true");
+	    options.put("detect_language", "true");
+	    options.put("probability", "true");
+	    
+	    // 参数为本地图片二进制数组
+	    byte[] file = null;
+		try {
+			file = readImageFile("E:/test2.png");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    JSONObject res = client.basicGeneral(file, options);
 	    System.out.println(res.toString(2));
 
 	}
