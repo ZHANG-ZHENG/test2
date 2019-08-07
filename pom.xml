@@ -20,5 +20,6 @@
 		<module>baidu-ocr</module>
 		<module>QqClient</module>
 		<module>QqServer</module>
+		<module>secret-key</module>
     </modules>  
 </project>
