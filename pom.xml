@@ -21,5 +21,6 @@
 		<module>QqClient</module>
 		<module>QqServer</module>
 		<module>secret-key</module>
+		<module>quartz</module>
     </modules>  
 </project>
