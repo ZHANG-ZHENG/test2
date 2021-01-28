@@ -3,24 +3,24 @@ package top.zhost.test;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-public class MqttServerDemo {
+public class MqttServerDemo2 {
     /**
      * 代理服务器ip地址
      */
-    public static final String MQTT_BROKER_HOST = "tcp://zhost.top:1883";
-
+    public static final String MQTT_BROKER_HOST = "tcp://172.18.33.117:1883";
+	//public static final String MQTT_BROKER_HOST = "tcp://172.20.124.14:1883";
     /**
      * 订阅标识
      */
-    public static final String MQTT_TOPIC = "topic1";
+    public static final String MQTT_TOPIC = "vb/task_result";
 
     private static String userName = "admin";
-    private static String password = "password";
+    private static String password = "ruijie123";
 
     /**
      * 客户端唯一标识
      */
-    public static final String MQTT_CLIENT_ID = "zz_server_test";
+    public static final String MQTT_CLIENT_ID = "zz_server_test_mqtt";
     private static MqttTopic topic;
     private static MqttClient client;
 
@@ -31,8 +31,8 @@ public class MqttServerDemo {
             client = new MqttClient(MQTT_BROKER_HOST, MQTT_CLIENT_ID, new MemoryPersistence());
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
-            //options.setUserName(userName);
-            //options.setPassword(password.toCharArray());
+            options.setUserName(userName);
+            options.setPassword(password.toCharArray());
             options.setConnectionTimeout(10);
             options.setKeepAliveInterval(20);
 
@@ -40,7 +40,7 @@ public class MqttServerDemo {
 
             message.setQos(1);
             message.setRetained(false);
-            String messageContent = "message from server "+System.currentTimeMillis();
+            String messageContent = "{\"taskItemId\":\"1\",\"mac\":\"1\",\"success\":\"true\"}";
             message.setPayload(messageContent.getBytes());
             client.connect(options);
 

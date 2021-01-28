@@ -3,11 +3,11 @@ package top.zhost.test;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-public class MqttClientDemo {
+public class MqttClientDemo2 {
     /**
      * 代理服务器ip地址
      */
-    public static final String MQTT_BROKER_HOST = "tcp://zhost.top:1883";
+    public static final String MQTT_BROKER_HOST = "tcp://172.18.33.117:1883";
 
     /**
      * 客户端唯一标识
@@ -26,8 +26,8 @@ public class MqttClientDemo {
     /**
      * 密码
      */
-    public static final String PASSWORD = "password";
-    public static final String TOPIC_FILTER = "topic2";
+    public static final String PASSWORD = "ruijie123";
+    public static final String TOPIC_FILTER = "vb/task/1";
 
     private volatile static MqttClient mqttClient;
     private static MqttConnectOptions options;
@@ -43,9 +43,9 @@ public class MqttClientDemo {
             // 这里设置为true表示每次连接到服务器都以新的身份连接
             options.setCleanSession(true);
             // 设置用户名
-            //options.setUserName(USERNAME);
+            options.setUserName(USERNAME);
             // 设置密码
-            //options.setPassword(PASSWORD.toCharArray());
+            options.setPassword(PASSWORD.toCharArray());
             // 设置超时时间 单位为秒
             options.setConnectionTimeout(10);
             // 设置会话心跳时间 单位为秒 服务器会每隔1.5*20秒的时间向客户端发送个消息判断客户端是否在线，但这个方法并没有重连的机制
