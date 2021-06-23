@@ -24,6 +24,7 @@ public class Sender {
         ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("admin","Ruijie@Artemis",BROKER_URL);
         //建立连接
         Connection conn=  connectionFactory.createConnection();
+        conn.setClientID("zz_jms_"+System.currentTimeMillis());
         //启动连接
         conn.start();
         //创建Session，此方法第一个参数表示会话是否在事务中执行，第二个参数设定会话的应答模式
