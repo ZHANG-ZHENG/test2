@@ -12,7 +12,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 /**
  * @Description 基于发布/订阅模式传输类型的生产者测试
  */
-public class MyProducerForTopic {
+public class TopicReceiver {
 
     private static final String ACTIVEMQ_URL = "tcp://sub.zhost.top:61616";
 

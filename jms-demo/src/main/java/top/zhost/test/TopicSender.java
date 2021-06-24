@@ -13,8 +13,9 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 /**
  * @Description 基于发布/订阅模式传输类型的消费者测试
+ * https://www.cnblogs.com/xiguadadage/p/11217604.html
  */
-public class MyConsumerForTopic {
+public class TopicSender {
 
     private static final String ACTIVEMQ_URL =  "tcp://sub.zhost.top:61616";
 
